@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="Cucumber" time="56.738" tests="3" skipped="0" failures="0" errors="0">
+<testcase classname="Login Functionality of HRM Web Application" name="Verification of Login using valid credentials" time="22.546">
+<system-out><![CDATA[
+Given User is on HRMLogin page "https://opensource-demo.orangehrmlive.com"..passed
+When User enters username as "Admin"........................................passed
+And User enters password as "admin123"......................................passed
+And User clicks login button................................................passed
+Then User should be able to login sucessfully and Home page opens...........passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality of HRM Web Application" name="Login using invalid credentials" time="13.972">
+<system-out><![CDATA[
+Given User is on HRMLogin page "https://opensource-demo.orangehrmlive.com"..passed
+When User enters username as "username".....................................passed
+And User enters password as "password"......................................passed
+And User clicks login button................................................passed
+Then User should be unable to login.........................................passed
+]]></system-out>
+</testcase>
+<testcase classname="Login Functionality of HRM Web Application" name="Login with Blank credentials" time="19.936">
+<system-out><![CDATA[
+Given User is on HRMLogin page "https://opensource-demo.orangehrmlive.com"..passed
+When User enters username as " "............................................passed
+And User enters password as " ".............................................passed
+And User clicks login button................................................passed
+Then User should cannot login without values................................passed
+]]></system-out>
+</testcase>
+</testsuite>

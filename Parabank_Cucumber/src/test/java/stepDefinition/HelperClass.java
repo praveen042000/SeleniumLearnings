@@ -15,7 +15,7 @@ public class HelperClass {
 	public final static int TIMEOUT =10;
 	
 	HelperClass() {
-		driver = new ChromeDriver();
+		driver = new EdgeDriver();
 //		wait = new WebDriverWait(driver, Duration.ofSeconds(TIMEOUT));
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(TIMEOUT));
 		driver.manage().window().maximize();
