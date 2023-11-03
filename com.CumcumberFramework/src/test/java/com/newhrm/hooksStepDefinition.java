@@ -58,8 +58,30 @@ public class hooksStepDefinition {
 		
 	    System.out.println("click login");
 	    Assert.assertTrue(newPageText.equals("Dashboard"));
-	    
 	}
+	    
+	    @Then("User should be unable to login")
+	    public void user_should_be_unable_to_login() {
+	    	String newPageText2 = driver.findElement(By.xpath("//p[@class='oxd-text oxd-text--p oxd-alert-content-text']")).getText();
+			
+		    System.out.println("Invalid username and pasword");
+		    Assert.assertTrue(newPageText2.equals("Invalid credentials"));
+	       
+	    }
+
+	    @Then("User should cannot login without values")
+	    public void user_should_cannot_login_without_values() {
+String newPageText3 = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'])[1]")).getText();
+			
+		    System.out.println("Invalid username and pasword");
+		    Assert.assertTrue(newPageText3.equals("Required"));
+String newPageText4 = driver.findElement(By.xpath("(//span[@class='oxd-text oxd-text--span oxd-input-field-error-message oxd-input-group__message'])[2]")).getText();
+			
+		    System.out.println("Invalid username and pasword");
+		    Assert.assertTrue(newPageText4.equals("Required"));
+	    }
+	    
+	
 	@After
 	public void close() {
 		driver.quit();
@@ -68,3 +90,4 @@ public class hooksStepDefinition {
 	
 
 }
+

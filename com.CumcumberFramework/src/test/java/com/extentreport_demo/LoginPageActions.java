@@ -1,5 +1,11 @@
 package com.extentreport_demo;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.Properties;
+
 import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageActions {
@@ -27,6 +33,21 @@ public class LoginPageActions {
 	}
 	
 public void loginInfo(String userName,String password) {
+	
+	File file = new File("");
+	FileInputStream fileInpur = null;
+	try {
+		fileInput = new FileInputStream(file);}
+		catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		
+		Properties prop  = new properies();
+		try {
+			prop.load(fileInput);
+		}catch (IOException e)
+		e.printStackTrace();
+	}
 	setUserName(userName);
 	setPassword(password);
 }
